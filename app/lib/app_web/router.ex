@@ -17,6 +17,8 @@ defmodule AppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/json-to-csv", SerializerController, :new
+    post "/json-to-csv", SerializerController, :create
   end
 
   # Other scopes may use custom stacks.

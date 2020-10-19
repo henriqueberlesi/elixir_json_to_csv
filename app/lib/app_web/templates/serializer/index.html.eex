@@ -1,0 +1,17 @@
+<div>
+  <%= form_for @conn, Routes.serializer_path(@conn, :create), fn f -> %>
+
+  <div class="form-group">
+    <h1>JSON to CSV converter</h1>
+    <%= textarea f, :json, class: "form-control", placeholder: "Enter your JSON here", rows: "10" %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+  </div>
+   
+<div>
+  <h3>Result</h3>
+  <textarea name="json" id="appform" cols="80" rows="10" placeholder="Your result will appear here."><%= if assigns[:content] do %><%= assigns[:content] %> <% end %></textarea>
+</div>
