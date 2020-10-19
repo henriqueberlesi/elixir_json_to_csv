@@ -1,5 +1,7 @@
 # Json to CSV Converter
 
+![Example](https://i.imgur.com/v9jajxS.png)
+
 ## Installation:
 Clone this repository.
 Run `docker-compose run --rm phoenix mix deps.get`
